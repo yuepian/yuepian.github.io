@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.yuepian.wang</id>
     <title>YP</title>
-    <updated>2019-06-18T03:23:39.097Z</updated>
+    <updated>2019-06-18T03:25:37.189Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.yuepian.wang"/>
     <link rel="self" href="https://www.yuepian.wang/atom.xml"/>
