@@ -4,7 +4,7 @@
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>YP</title>
-<link rel="shortcut icon" href="http://yuepian.wang/favicon.ico?v=1562555468253">
+<link rel="shortcut icon" href="http://yuepian.wang/favicon.ico?v=1562555860847">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="http://yuepian.wang/styles/main.css">
@@ -20,7 +20,7 @@
       <div class="main-content">
         <div class="site-header">
   <a href="http://yuepian.wang">
-  <img class="avatar" src="http://yuepian.wang/images/avatar.png?v=1562555468253" alt="">
+  <img class="avatar" src="http://yuepian.wang/images/avatar.png?v=1562555860847" alt="">
   </a>
   <h1 class="site-title">
     YP
@@ -108,27 +108,42 @@
 
   // 配置文件官方API: https://l2dwidget.js.org/docs/class/src/index.js~L2Dwidget.html#instance-method-init
   var config = {
-      model: {
-          //jsonPath: 'http://yuepian.wang/media/live2d-widget-model-tororo/assets/tororo.model.json', // xxx.model.json 的路径
-          jsonPath: 'http://yuepian.wang/media/live2d-widget-model-hijiki/assets/hijiki.model.json',
-      },
-      display: {
-          superSample: 1, // 超采样等级
-          width: 350, // canvas的宽度
-          height: 400, // canvas的高度
-          position: 'right', // 显示位置：左或右
-          hOffset: 0, // canvas水平偏移
-          vOffset: 0, // canvas垂直偏移
-      },
-      mobile: {
-          show: true, // 是否在移动设备上显示
-          scale: 1, // 移动设备上的缩放
-          motion: true, // 移动设备是否开启重力感应
-      },
-      react: {
-          opacityDefault: 1, // 默认透明度
-          opacityOnHover: 1, // 鼠标移上透明度
-      },
+    model: {
+        //jsonPath: 'http://yuepian.wang/media/live2d-widget-model-tororo/assets/tororo.model.json', // xxx.model.json 的路径
+        jsonPath: 'http://yuepian.wang/media/live2d-widget-model-hijiki/assets/hijiki.model.json',
+    },
+    display: {
+        superSample: 1, // 超采样等级
+        width: 350, // canvas的宽度
+        height: 400, // canvas的高度
+        position: 'right', // 显示位置：左或右
+        hOffset: 0, // canvas水平偏移
+        vOffset: 0, // canvas垂直偏移
+    },
+    mobile: {
+        show: true, // 是否在移动设备上显示
+        scale: 1, // 移动设备上的缩放
+        motion: true, // 移动设备是否开启重力感应
+    },
+    react: {
+        opacityDefault: 1, // 默认透明度
+        opacityOnHover: 1, // 鼠标移上透明度
+    },
+    dialog: {
+      // 开启对话框
+      enable: true,
+      script: {
+        // 每空闲 10 秒钟，显示一条一言
+        //'every idle 10s': '$hitokoto$',
+        // 当触摸到星星图案
+        //'hover .star': '星星在天上而你在我心里 (*/ω＼*)',
+        'scroll': '太快了，好晕！',
+        // 当触摸到角色身体
+        'tap body': '喵~~！别碰我！',
+        // 当触摸到角色头部
+        'tap face': '喵~~ 喵~~ 喵~~'
+      }
+    }
   }
 
   L2Dwidget
